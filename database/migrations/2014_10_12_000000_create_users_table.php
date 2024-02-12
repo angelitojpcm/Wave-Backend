@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('photo')->default('default.jpg');
             $table->unsignedBigInteger('last_device');
             $table->foreign('last_device')->references('id')->on('devices');
+            $table->boolean('state')->default(1);
             $table->timestamps();
         });
     }
@@ -40,8 +41,8 @@ return new class extends Migration
     public function run(): void
     {
         DB::table('users')->insert([
-            ['full_name' => 'admin', 'email' => 'angelitojpcmantilla22@gmail.com', 'rol_id' => 1, 'password' => bcrypt('admin')],
-            ['full_name' => 'demo', 'email' => 'demo@wave.com', 'rol_id' => 3, 'password' => bcrypt('demo')]
+            ['full_name' => 'admin', 'email' => 'angelitojpcmantilla22@gmail.com', 'rol_id' => 1, 'password' => bcrypt('admin'), 'state'=> 1],
+            ['full_name' => 'demo', 'email' => 'demo@wave.com', 'rol_id' => 3, 'password' => bcrypt('demo'), 'state'=> 1]
         ]);
     }
 };

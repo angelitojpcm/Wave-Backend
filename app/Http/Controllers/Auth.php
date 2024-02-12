@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class Auth extends Controller implements JWTSubject
@@ -31,6 +32,16 @@ class Auth extends Controller implements JWTSubject
         $credentials = request(['email', 'password']);
 
         if (! $token = auth('api')->attempt($credentials)) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+
+        $data = $this->model->where('email', $request->email)
+                            ->where('state', 1)
+                            ->first()
+                            ->toArray();
+
+        //Verificar el password
+        if (!Hash::check($request->password, $data->password, [])) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
