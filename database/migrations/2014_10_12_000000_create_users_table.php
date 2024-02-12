@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -13,11 +14,14 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('full_name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->unsignedBigInteger('rol_id');
+            $table->foreign('rol_id')->references('id')->on('roles');
             $table->string('password');
-            $table->rememberToken();
+            $table->string('photo')->default('default.jpg');
+            $table->unsignedBigInteger('last_device');
+            $table->foreign('last_device')->references('id')->on('devices');
             $table->timestamps();
         });
     }
@@ -28,5 +32,16 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
+    }
+
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        DB::table('users')->insert([
+            ['full_name' => 'admin', 'email' => 'angelitojpcmantilla22@gmail.com', 'rol_id' => 1, 'password' => bcrypt('admin')],
+            ['full_name' => 'demo', 'email' => 'demo@wave.com', 'rol_id' => 3, 'password' => bcrypt('demo')]
+        ]);
     }
 };
