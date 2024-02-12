@@ -1,4 +1,4 @@
-# Nombre del Proyecto
+# Wave
 
 Descripción del proyecto.
 
