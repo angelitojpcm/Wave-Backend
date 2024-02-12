@@ -15,8 +15,8 @@ Aquí están los comandos más importantes que puedes necesitar para trabajar co
 
 ## Contribuidores
 
--   [![Angel Calderon Mantilla](https://avatars.githubusercontent.com/u/150268753?s=400&u=6ed1f6e87db40bd7c6f7a89d6b675e96fad5f4e7&v=4)](https://github.com/angelitojpcm) [Angel Calderon Mantilla](https://github.com/angelitojpcm)
--   [![David Miñano Moreno](https://avatars.githubusercontent.com/u/108392777?v=4)](https://github.com/David182003/) [David Miñano Moreno](https://github.com/David182003/)
+-   [![Angel Calderon Mantilla](https://avatars.githubusercontent.com/u/150268753?s=100&u=6ed1f6e87db40bd7c6f7a89d6b675e96fad5f4e7&v=4)](https://github.com/angelitojpcm) [Angel Calderon Mantilla](https://github.com/angelitojpcm)
+-   [![David Miñano Moreno](https://avatars.githubusercontent.com/u/108392777?s=100&v=4)](https://github.com/David182003/) [David Miñano Moreno](https://github.com/David182003/)
 ## Licencia
 
 Este proyecto está licenciado bajo la licencia [Nombre de la licencia](URL a la licencia).
