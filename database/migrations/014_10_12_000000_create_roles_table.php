@@ -27,17 +27,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('roles');
     }
-
-
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
-    {
-        DB::table('roles')->insert([
-            ['name' => 'admin', 'description' => 'Administrador con todos los permisos'],
-            ['name' => 'editor', 'description' => 'Editor con permisos para crear y editar contenido'],
-            ['demo' => 'demo', 'description' => 'Usuario de demostración con permisos limitados']
-        ]);
-    }
 };

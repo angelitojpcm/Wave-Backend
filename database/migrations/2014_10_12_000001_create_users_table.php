@@ -20,7 +20,7 @@ return new class extends Migration
             $table->foreign('rol_id')->references('id')->on('roles');
             $table->string('password');
             $table->string('photo')->default('default.jpg');
-            $table->unsignedBigInteger('last_device');
+            $table->unsignedBigInteger('last_device')->nullable();
             $table->foreign('last_device')->references('id')->on('devices');
             $table->boolean('state')->default(1);
             $table->timestamps();
@@ -33,16 +33,5 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('users');
-    }
-
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
-    {
-        DB::table('users')->insert([
-            ['full_name' => 'admin', 'email' => 'angelitojpcmantilla22@gmail.com', 'rol_id' => 1, 'password' => bcrypt('admin'), 'state'=> 1],
-            ['full_name' => 'demo', 'email' => 'demo@wave.com', 'rol_id' => 3, 'password' => bcrypt('demo'), 'state'=> 1]
-        ]);
     }
 };

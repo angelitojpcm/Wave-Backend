@@ -64,6 +64,7 @@ class CreateDatabase extends Command
         DB::purge('mysql');
         DB::reconnect('mysql');
 
+        $this->call('migrate:install');
         // Obtén la lista de migraciones
         $migrator = app('migrator');
         $migrationFiles = $migrator->getMigrationFiles(database_path('migrations'));
@@ -84,5 +85,8 @@ class CreateDatabase extends Command
                 }
             }
         }
+
+        // Ejecuta las semillas
+        $this->call('db:seed');
     }
 }
