@@ -6,8 +6,7 @@ Descripción del proyecto.
 
 Aquí están los comandos más importantes que puedes necesitar para trabajar con este proyecto:
 
--   `php artisan app:create-database`: Crea la base de datos necesaria para el backend.
--   `php artisan migration`: Migra todas las tablas de [database/migrations](database/migrations/).
+-   `php artisan app:create-database`: Crea la base de datos necesaria para el backend, y la vez migra todas las bases de datos ubicados en [database/migrations](database/migrations/).
 -   `php artisan serve`: Inicializa el servidor de laravel.
 -   `php artisan make:model`: Este comando crea un nuevo modelo en Laravel. Si añades la opción `-c` al final, también se creará un controlador para ese modelo. Por ejemplo, `php artisan make:model User -c` creará tanto el modelo `User` como un controlador para `User`. Si deseas organizar tus modelos en subcarpetas, puedes especificar la subcarpeta al crear el modelo. Sin embargo, ten en cuenta que el controlador no se colocará en la misma subcarpeta. Por ejemplo, `php artisan make:model Admin/User` creará el modelo `User` en la subcarpeta `Admin`, pero el controlador `UserController` se creará en la carpeta de controladores principal.
 

@@ -13,12 +13,6 @@ return new class extends Migration
     {
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->string('name');
-            $table->string('ip')->unique();
-            $table->string('direction')->nullable();
-            $table->timestamp('last_login')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +24,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('devices');
     }
-
-    
 };
