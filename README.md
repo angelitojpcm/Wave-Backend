@@ -2,6 +2,11 @@
 
 Descripción del proyecto.
 
+
+>_[!WARNING]_
+Recuerda utilizar en el middleware de [routes/api.php](routes/api.php) siempre jwt:auth para requerir siempre un token de Autenticacio y tener más seguridad; para que nuestra api no responda a cualquier petición sospechosa
+
+
 ## Comandos
 
 Aquí están los comandos más importantes que puedes necesitar para trabajar con este proyecto:
@@ -12,8 +17,7 @@ Aquí están los comandos más importantes que puedes necesitar para trabajar co
 
 -   `php artisan make:controller`: Este comando crea un nuevo controlador en Laravel. Si añades la opción `-m` seguida del nombre de un modelo, el controlador se creará con un conjunto de métodos predefinidos para un recurso, asumiendo que el controlador interactuará con el modelo especificado. Por ejemplo, `php artisan make:controller UserController -m User` creará un controlador `UserController` con métodos para crear, leer, actualizar y eliminar instancias del modelo `User`. Además, este comando también generará un modelo `User` si no existe ya. Si deseas organizar tus controladores en subcarpetas, puedes especificar la subcarpeta al crear el controlador. Sin embargo, ten en cuenta que el modelo no se colocará en la misma subcarpeta. Por ejemplo, `php artisan make:controller Admin/UserController -m User` creará el controlador `UserController` en la subcarpeta `Admin`, pero el modelo `User` se creará en la carpeta de modelos principal.
 
->_[!warning]_
-Recuerda utilizar en el middleware de [routes/api.php](routes/api.php) siempre jwt:auth para requerir siempre un token de Autenticacio y tener más seguridad; para que nuestra api no responda a cualquier petición sospechosa
+
 
 ## Contribuidores
 
