@@ -3,7 +3,7 @@
 Descripción del proyecto.
 
 
->_[!WARNING]_
+>[!WARNING]
 >Recuerda utilizar en el middleware de [routes/api.php](routes/api.php) siempre jwt:auth para requerir siempre un token de Autenticacio y tener más seguridad; para que nuestra api no responda a cualquier petición sospechosa
 
 
