@@ -1,11 +1,7 @@
 # Wave
 
-Descripción del proyecto.
-
-
->[!IMPORTANT]
->Recuerda utilizar en el middleware de [routes/api.php](routes/api.php) siempre jwt:auth para requerir siempre un token de Autenticacio y tener más seguridad; para que nuestra api no responda a cualquier petición sospechosa
-
+<p style="text-aling:justify;">
+Wave es una empresa oficial de software que busca revolucionar la forma en que interactuamos con la web. Como innovadores en el campo del software, Wave utiliza tecnologías de vanguardia para proporcionar una experiencia de usuario fluida y dinámica que pone el control en manos del usuario. Ya sea que estés buscando optimizar tu flujo de trabajo o simplemente explorar la web de una manera nueva y emocionante, Wave tiene la solución para ti. Únete a nosotros en esta emocionante aventura y experimenta la innovación de primera mano con Wave.</p>
 
 ## Comandos
 
@@ -17,7 +13,8 @@ Aquí están los comandos más importantes que puedes necesitar para trabajar co
 
 -   `php artisan make:controller`: Este comando crea un nuevo controlador en Laravel. Si añades la opción `-m` seguida del nombre de un modelo, el controlador se creará con un conjunto de métodos predefinidos para un recurso, asumiendo que el controlador interactuará con el modelo especificado. Por ejemplo, `php artisan make:controller UserController -m User` creará un controlador `UserController` con métodos para crear, leer, actualizar y eliminar instancias del modelo `User`. Además, este comando también generará un modelo `User` si no existe ya. Si deseas organizar tus controladores en subcarpetas, puedes especificar la subcarpeta al crear el controlador. Sin embargo, ten en cuenta que el modelo no se colocará en la misma subcarpeta. Por ejemplo, `php artisan make:controller Admin/UserController -m User` creará el controlador `UserController` en la subcarpeta `Admin`, pero el modelo `User` se creará en la carpeta de modelos principal.
 
-
+> [!IMPORTANT]
+> Recuerda utilizar en el middleware de [routes/api.php](routes/api.php) siempre jwt:auth para requerir siempre un token de Autenticacio y tener más seguridad; para que nuestra api no responda a cualquier petición sospechosa
 
 ## Contribuidores
 
@@ -35,6 +32,3 @@ Aquí están los comandos más importantes que puedes necesitar para trabajar co
         </a>
     </li>
 </ul>
-
-
-Este proyecto está licenciado bajo la licencia [Nombre de la licencia](URL a la licencia).
