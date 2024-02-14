@@ -17,9 +17,20 @@ Recuerda utilizar en el middleware de [routes/api.php](routes/api.php) siempre j
 
 ## Contribuidores
 
-
--   [![Angel Calderon Mantilla](https://avatars.githubusercontent.com/u/150268753?s=100&u=6ed1f6e87db40bd7c6f7a89d6b675e96fad5f4e7&v=4)](https://github.com/angelitojpcm) [Angel Calderon Mantilla](https://github.com/angelitojpcm)
--   [![David Miñano Moreno](https://avatars.githubusercontent.com/u/108392777?s=100&v=4)](https://github.com/David182003/) [David Miñano Moreno](https://github.com/David182003/)
+<ul>
+    <li>
+        <a href="https://github.com/angelitojpcm">
+            <img src="https://avatars.githubusercontent.com/u/150268753?s=100&u=6ed1f6e87db40bd7c6f7a89d6b675e96fad5f4e7&v=4" alt="Angel Calderon Mantilla" width="100" height="100">
+            Angel Calderon Mantilla
+        </a>
+    </li>
+    <li>
+        <a href="https://github.com/David182003/">
+            <img src="https://avatars.githubusercontent.com/u/108392777?s=100&v=4" alt="David Miñano Moreno" width="100" height="100">
+            David Miñano Moreno
+        </a>
+    </li>
+</ul>
 
 ## Licencia
 
