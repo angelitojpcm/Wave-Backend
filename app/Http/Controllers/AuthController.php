@@ -44,7 +44,8 @@ class AuthController extends Controller
         //Generar el token
         $token = JWTAuth::fromUser($user);
 
-        return $this->respondWithToken($token);
+        //Retornar el token
+        return $this->respondWithToken($token, $user);
     }
 
 
@@ -55,7 +56,7 @@ class AuthController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
 
-    protected function respondWithToken($token)
+    protected function respondWithToken($token, $user)
     {
         $payload = JWTAuth::setToken($token)->getPayload();
         $expires_in = $payload['exp'] - time();
@@ -64,7 +65,15 @@ class AuthController extends Controller
             'access_token' => $token,
             'token_type' => 'bearer',
             'expires_in' => $expires_in,
-            'user' => auth('api')->user()->full_name,
+            'user' => [
+                'id' => $user->id,
+                'full_name' => $user->full_name,
+                'email' => $user->email,
+                'photo' => $user->photo,
+                'rol_id' => $user->rol_id,
+                'last_device' => $user->last_device ? $user->last_device : null,
+                'state' => $user->state,
+            ],
         ]);
     }
 }

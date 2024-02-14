@@ -11,7 +11,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable implements JWTSubject
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -77,5 +77,31 @@ class User extends Authenticatable implements JWTSubject
     public function getJWTCustomClaims()
     {
         return [];
+    }
+
+    /**
+     * Relationships Of User Model with Rol
+     */
+    public function rol()
+    {
+        return $this->belongsTo(Roles::class);
+    }
+
+    /**
+     * Fliter Avance
+     * @param string $item
+     * @param string $search
+     * @param int $state
+     */
+    function scopeFilterAdvance($query, $item, $search, $state)
+    {
+        if ($search && $item) {
+            $query->where($item, "like", "%" . $search . "%");
+        }
+        if ($state) {
+            $query->where("state", $state);
+        }
+
+        return $query;
     }
 }
